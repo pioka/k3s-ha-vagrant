@@ -1,0 +1,27 @@
+# cpus <Integer> required:
+#   Required. Number of CPUs
+# memory_mb <Integer> required:
+#   Required. Size of RAM[MB].
+# external_disk_size_mb <Integer>:
+#   Optional. Size of External disk[MB]. Device /dev/sdb will be added.
+# private_ip <String>:
+#   Required. Host only adapter address to access guest machine
+# ssh_forward_port <Integer>:
+#   Required. SSH port number forwarding host machine.
+
+hosts:
+  k3s-node1:
+    cpus: 2
+    memory_mb: 1024
+    private_ip: 192.168.222.11
+    ssh_forward_port: 22211
+  k3s-node2:
+    cpus: 2
+    memory_mb: 1024
+    private_ip: 192.168.222.12
+    ssh_forward_port: 22212
+  k3s-node3:
+    cpus: 2
+    memory_mb: 1024
+    private_ip: 192.168.222.13
+    ssh_forward_port: 22213
